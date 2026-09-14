@@ -1,0 +1,37 @@
+{
+  "name": "genpark-agentic-cache-semantic-deduplicator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Semantic prompt cache and deduplication engine calculating Jaccard token overlap to prevent redundant LLM invocations and token costs.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "cache-optimization",
+  "tags": [
+    "prompt-cache",
+    "semantic-deduplication",
+    "jaccard-similarity",
+    "token-savings",
+    "llm-caching"
+  ],
+  "inputs": {
+    "query_prompt": {
+      "type": "string"
+    },
+    "estimated_tokens": {
+      "type": "integer",
+      "default": 1500
+    }
+  },
+  "outputs": {
+    "cache_status": {
+      "type": "string"
+    },
+    "jaccard_similarity": {
+      "type": "number"
+    },
+    "tokens_saved": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
